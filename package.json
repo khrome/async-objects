@@ -1,0 +1,30 @@
+{
+    "name": "async-objects",
+    "homepage": "https://github.com/khrome/async-objects",
+    "version": "0.0.1-alpha",
+    "main": "async-arrays.js",
+    "description": "",
+    "keywords": [
+        "object",
+        "async"
+    ],
+    "author": "Abbey Hawk Sparrow <@khrome> (http://patternweaver.com)",
+    "contributors": [],
+    "bugs": {
+        "url": "https://github.com/khrome/async-objects/issues"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/khrome/async-objects.git"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "*",
+        "should": "*"
+    },
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}
