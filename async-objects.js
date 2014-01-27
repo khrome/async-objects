@@ -60,6 +60,12 @@ var arrays = require('async-arrays');
             });
             return ob;
         };
+        
+        if(!ob.random) ob.random = function(object, callback){
+            var keys = prime.keys(object);
+            var randomIndex = Math.floor(Math.random()*prime.size(object));
+            callback(object[keys[randomIndex]], keys[randomIndex]);
+        }
     
         if(!ob.merge) ob.merge = function(objOne, objTwo){
             var result = {};
@@ -89,10 +95,11 @@ var arrays = require('async-arrays');
             });
             return results;
         };
+        
+        return ob;
     }
     
     module.exports = on({});
     module.exports.on = on;
-    module.exports.extensions = extensions;
     
 })();
