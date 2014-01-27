@@ -63,7 +63,7 @@ var arrays = require('async-arrays');
         
         if(!ob.random) ob.random = function(object, callback){
             var keys = prime.keys(object);
-            var randomIndex = Math.floor(Math.random()*prime.size(object));
+            var randomIndex = Math.floor(Math.random()*Object.keys(object).length);
             callback(object[keys[randomIndex]], keys[randomIndex]);
         }
     
