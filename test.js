@@ -7,6 +7,10 @@ var object = {
     oneMoreKey : 'yet more'
 }
 
+var anotherObject = {
+    someKey : 'a value'
+}
+
 var poolSize = 2;
 
 describe('async-objects', function(){
@@ -67,6 +71,20 @@ describe('async-objects', function(){
                 count.should.equal(0);
                 complete();
             });
+        });
+    
+    });
+    
+    describe('uses merge', function(){
+        
+        it('to combine two objects', function(complete){
+            var count = 0;
+            var combined = Object.merge(object, anotherObject);
+            should.exist(combined.aKey);
+            should.exist(combined.anotherKey);
+            should.exist(combined.oneMoreKey);
+            should.exist(combined.someKey);
+            complete();
         });
     
     });

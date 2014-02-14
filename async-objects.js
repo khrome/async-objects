@@ -23,7 +23,7 @@ var arrays = require('async-arrays');
         };
 
         if(!ob.forEach) ob.forEach = function(object, callback){
-            arrays.forEachEmission(Object.keys(object), function(key, index){
+            Object.keys(object).forEach(function(key, index){
                 callback(object[key], key);
             });
         };
@@ -62,7 +62,7 @@ var arrays = require('async-arrays');
         };
         
         if(!ob.random) ob.random = function(object, callback){
-            var keys = prime.keys(object);
+            var keys = Object.keys(object);
             var randomIndex = Math.floor(Math.random()*Object.keys(object).length);
             callback(object[keys[randomIndex]], keys[randomIndex]);
         }
