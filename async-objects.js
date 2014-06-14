@@ -78,9 +78,9 @@ var arrays = require('async-arrays');
             return result;
         };
 
-        if(!ob.map) ob.map = function(ob, callback, excludeUndefined){
+        if(!ob.map) ob.map = function(obj, callback, excludeUndefined){
             var result = {}
-            ob.forEach(ob, function(item, index){
+            ob.forEach(obj, function(item, index){
                 var res = callback(item, index, result);
                 if(excludeUndefined && res === undefined) return;
                 result[index] = res;
