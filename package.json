@@ -1,7 +1,7 @@
 {
     "name": "async-objects",
     "homepage": "https://github.com/khrome/async-objects",
-    "version": "0.0.5-beta",
+    "version": "0.0.6-beta",
     "main": "async-objects.js",
     "description": "Async control for objects",
     "keywords": [

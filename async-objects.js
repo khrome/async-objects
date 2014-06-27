@@ -1,5 +1,12 @@
-var arrays = require('async-arrays');
-(function(){
+(function (root, factory){
+    if (typeof define === 'function' && define.amd){
+        define(['async-arrays'], factory);
+    }else if (typeof exports === 'object'){
+        module.exports = factory(require('async-arrays'));
+    }else{
+        root.AsyncObjects = factory(root.AsyncArrays);
+    }
+}(this, function (b){
     var on = function(ob){
         ob = ob || {};
         if(!ob.clone) ob.clone = function(obj){
@@ -99,7 +106,7 @@ var arrays = require('async-arrays');
         return ob;
     }
     
-    module.exports = on({});
-    module.exports.on = on;
-    
-})();
+    var result = on({});
+    result.on = on;
+    return result;
+}));
