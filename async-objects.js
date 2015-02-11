@@ -6,7 +6,7 @@
     }else{
         root.AsyncObjects = factory(root.AsyncArrays);
     }
-}(this, function (b){
+}(this, function (arrays){
     var on = function(ob){
         ob = ob || {};
         if(!ob.clone) ob.clone = function(obj){
