@@ -1,7 +1,13 @@
 async-objects.js
 ===============
 
-utility functions for Object when using that data asynchronously, ported from prime-ext
+[![NPM version](https://img.shields.io/npm/v/async-objects.svg)]()
+[![npm](https://img.shields.io/npm/dt/async-objects.svg)]()
+[![Travis](https://img.shields.io/travis/khrome/async-objects.svg)]()
+
+This used to be an object-oriented flow control library. While it still is, [async](https://www.npmjs.com/package/async) does it better.
+
+Now it's just something to use when I want something more lightweight. YMMV
 
 Usage
 -----
