@@ -95,7 +95,7 @@ npm run browser-test
 ```
 to run the same test headless in a browser with commandline results:
 ```bash
-npm run headless-<>-test
+npm run headless-<browser>-test
 ```
 where `<browser>` is one of `firefox`, `safari` or `chrome`
 (add `-- --open --head` to open the browsers process for investigation)
