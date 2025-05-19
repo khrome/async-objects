@@ -1,5 +1,5 @@
 var should = require("should");
-require('./async-objects').on(Object);
+require('../src/legacy.cjs').on(Object);
 
 var object = {
     aKey : 'some value',
